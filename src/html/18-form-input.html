@@ -52,6 +52,11 @@
         <!-- 줄바꿈을 하면 공백이 생기기 때문에 label의 태그 종료를 input 앞에서 종료되게 하는 프리티어 기능 -->
         <!-- required: 값이 없으면 서버로 넘어가지 않음 > 필수 체크해라~~ 하는 속성 -->
       </div>
+      <!-- WAI-ARIA 이용 -->
+      <div>
+        <label for="userEmail1">이메일</label>
+        <input type="email" name="userEmail" aria-labelledby="userEmail1" />
+      </div>
       <!-- checkbox : 체크박스 서식 -->
       <div>
         <input
