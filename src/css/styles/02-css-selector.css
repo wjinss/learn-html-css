@@ -1,0 +1,39 @@
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css');
+/* 전체 선택자 */
+*,
+body {
+  font-weight: 300;
+  font-family:
+    'Pretendard Variable',
+    Pretendard,
+    -apple-system,
+    BlinkMacSystemFont,
+    system-ui,
+    Roboto,
+    'Helvetica Neue',
+    'Segoe UI',
+    'Apple SD Gothic Neo',
+    'Noto Sans KR',
+    'Malgun Gothic',
+    'Apple Color Emoji',
+    'Segoe UI Emoji',
+    'Segoe UI Symbol',
+    sans-serif;
+}
+
+/* 태그(요소) 선택자 - Type selectors */
+p {
+  color: blue;
+}
+/* 클래스 선택자 - Class selectors */
+.like {
+  font-size: 22px;
+}
+/* 아이디 선택자 - ID selector */
+#lion {
+  background-color: yellow;
+}
+/* 속성 선택자 - Attribute selectors */
+p[title] {
+  border: 1px solid black;
+}
