@@ -1,0 +1,13 @@
+/* body(본문)요소에 배경 색상 지정하기 */
+body {
+  /* rrgba 요즘 버전 */
+  background-color: rgb(0 0 255 /0.5);
+}
+
+/* 제목 요소에 글자 크기 지정하기 */
+h1 {
+  font-size: small;
+  border-width: 2px;
+  border-style: solid;
+  border-color: currentColor;
+}
