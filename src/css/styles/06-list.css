@@ -7,3 +7,10 @@
     list-style-image: url(/src/assets/thumbnail/new.png);
   }
 }
+
+.likelion {
+  background-color: #faf;
+  ol {
+    list-style: upper-roman url(/src/assets/thumbnail/new.png) inside;
+  }
+}
