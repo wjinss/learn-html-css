@@ -1,0 +1,23 @@
+/* 박스 모델 */
+/* block box */
+/* boder 스타일링 */
+.lion {
+  background: #ffc;
+  border: 1px solid #333;
+  span {
+    background: #faf;
+    display: block;
+    width: 300px;
+    /* Inline box는 width와 같은 크기를 지정할 수 없다 */
+  }
+}
+
+/* inline boxs */
+.like {
+  background: #ccc;
+  display: inline;
+}
+.bootcamp {
+  background: #cfc;
+  display: inline-block;
+}
