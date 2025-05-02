@@ -1,0 +1,35 @@
+/* 베경 스타일링 */
+body {
+  background-color: rgba(255, 255, 180, 0.8);
+  background-image: url(/src/assets/images/sun.png), url(/src/assets/images/cloud.png), url(/src/assets/images/tree.png);
+  background-repeat: no-repeat;
+  background-position:
+    200px 150px,
+    50px 150px,
+    50px 200px;
+  background-size: 100px, auto, 600px;
+  background-attachment: fixed;
+}
+a {
+  display: inline-block;
+  border: 1px solid currentColor;
+  padding: 10px 20px;
+  /* background-color: hsla(110, 50%, 50%, 0.5); */
+  /* background-image: url(/src/assets/thumbnail/external-link.png); */
+  /* background-repeat: no-repeat; */
+  /* background-position: 0 50%; */
+  /* background-size: 14px; */
+  /* background-attachment: fixed; */
+  background: hsla(110, 50%, 50%, 0.5) url(/src/assets/thumbnail/external-link.png) no-repeat 0 50% / 14px auto;
+}
+
+h1 {
+  /* rgb() 함수로 배경 색상 적용하기 */
+  background-color: rgb(255 160 255 / 0.6);
+  padding: 5px 50px;
+  font-size: 20px;
+  background-image: url(/src/assets/thumbnail/new.png);
+  background-repeat: no-repeat;
+  background-position: 0 50%;
+  background-size: contain;
+}
