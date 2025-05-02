@@ -1,9 +1,13 @@
 /* 박스 모델 */
 /* block box */
 /* boder 스타일링 */
+/* padding 스타일링 */
 .lion {
+  box-sizing: border-box;
   background: #ffc;
   border: 1px solid #333;
+  padding: 10px;
+  width: 500px;
   span {
     background: #faf;
     display: block;
@@ -20,4 +24,20 @@
 .bootcamp {
   background: #cfc;
   display: inline-block;
+}
+
+/* margin 스타일링 */
+.school {
+  border: 1px solid coral;
+  margin: 10px;
+}
+
+/* overfloew 속성 */
+.techit {
+  border: 1px solid green;
+  padding: 10px;
+  margin: 10px;
+  height: 150px;
+  overflow: auto;
+  /* overflow: auto;와 overflow: scroll의 차이는 auto는 안보이는 부분만 스크롤되고 scroll는 가로, 세로 전부 스크롤이 됨 */
 }
