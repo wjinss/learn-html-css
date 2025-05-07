@@ -1,0 +1,35 @@
+/* css 포지션 */
+/* relative 값 */
+/* 원래 위치를 기준으로 이동함 */
+.like {
+  background-color: #000;
+  p {
+    border: 1px solid green;
+    background-color: rgb(255 255 80 / 1);
+    position: relative;
+    bottom: 20px;
+    right: 10px;
+  }
+}
+/* fixed 값 */
+/* 뷰포트를 기준으로 위치함 */
+h1 {
+  background-color: pink;
+  position: fixed;
+  right: 50px;
+  bottom: 50px;
+}
+
+/* absolute값 */
+/* 컨테이닝 블록을 기준으로 배치 */
+.bootcamp {
+  border: 1px solid blue;
+  position: relative;
+  span {
+    background-color: rgb(100 255 30 / 0.5);
+    border: 1px solid #000;
+    position: absolute;
+    top: 20px;
+    left: 0;
+  }
+}
