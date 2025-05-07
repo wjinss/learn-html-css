@@ -20,23 +20,29 @@ body {
 
 /* float 레이아웃 */
 .top_brand_section {
+  width: 1300px;
+  background: #ffc;
   h2 {
-    padding: 10px;
-    color: #333;
-    .h2_kr {
-      margin-top: 0.375rem;
+    color: #303033;
+    font-size: 0.875rem;
+    font-weight: 400;
+    margin-bottom: 16px;
+
+    span[lang] {
       display: block;
-      font-size: 1rem;
-      color: #ababab;
+      font-weight: 700;
+      font-size: 1.25rem;
     }
   }
   .top_brand_list {
     display: flow-root;
-    max-width: 1200px;
     li {
-      width: 230px;
+      width: 228px;
       float: left;
-      margin: 10px 15px 0 0;
+      margin: 12px 40px 0 0;
+      &:nth-child(5n) {
+        margin-right: 0;
+      }
     }
   }
 }
