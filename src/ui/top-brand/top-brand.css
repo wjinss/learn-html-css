@@ -1,4 +1,8 @@
 body {
   margin: 30px;
 }
+a {
+  text-decoration: none;
+  color: inherit;
+}
 /* float 레이아웃 */
