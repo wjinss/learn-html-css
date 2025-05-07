@@ -1,8 +1,9 @@
 .term {
   background: #ffc;
-  padding-right: 76px;
+  padding-left: 76px;
   position: relative;
   width: 30%;
+  min-height: 68px;
 
   em {
     color: #296897;
@@ -19,6 +20,6 @@
     background: lime;
     position: absolute;
     top: 0;
-    right: 0;
+    left: 0;
   }
 }
