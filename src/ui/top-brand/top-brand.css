@@ -1,8 +1,42 @@
 body {
-  margin: 30px;
+  margin: 50px;
 }
-a {
-  text-decoration: none;
-  color: inherit;
+
+/* 컴포넌트 */
+.top_brand_item {
+  div {
+    background: #f5f5f5;
+    border-radius: 0.5rem;
+  }
+  img {
+    margin-inline: auto;
+  }
+  figcaption {
+    padding-block-start: 10px;
+    text-align: center;
+    font-size: 0.75rem;
+  }
 }
+
 /* float 레이아웃 */
+.top_brand_section {
+  h2 {
+    padding: 10px;
+    color: #333;
+    .h2_kr {
+      margin-top: 0.375rem;
+      display: block;
+      font-size: 1rem;
+      color: #ababab;
+    }
+  }
+  .top_brand_list {
+    display: flow-root;
+    max-width: 1200px;
+    li {
+      width: 230px;
+      float: left;
+      margin: 10px 15px 0 0;
+    }
+  }
+}
