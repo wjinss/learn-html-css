@@ -2,3 +2,76 @@
 body {
   margin: 50px;
 }
+/* 인터랙션이 없는 아바타 */
+.avatars_img {
+  --size: 100px;
+  box-shadow: 0 0 0 1px red;
+  width: var(--size);
+  position: relative;
+
+  img {
+    border-radius: 50%;
+  }
+
+  .status {
+    width: 25%;
+    background: var(--gray);
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    border: 2px solid var(--wh);
+    position: absolute;
+    bottom: 2px;
+    right: 2px;
+
+    &.is-active {
+      background: #3f8;
+    }
+  }
+}
+/* 인터랙션이 있는 아바타 */
+.avatar-btn {
+  --size: 80px;
+  border: 0;
+  padding: 0;
+  background: transparent;
+  width: var(--size);
+  position: relative;
+
+  img {
+    border-radius: 50%;
+  }
+  &::after {
+    content: '';
+    display: block;
+    width: 25%;
+    aspect-ratio: 1/1;
+    background-color: var(--gray);
+    position: absolute;
+    bottom: 2px;
+    right: 2px;
+    border-radius: 50%;
+    border: 2px solid var(--wh);
+  }
+  &.is-active::after {
+    background: #3f8;
+  }
+}
+/* 아바타 리스트 */
+.avtars_list {
+  border: 1px solid #000;
+  padding: 26px 40px;
+
+  ul {
+    width: 380px;
+    margin: 0 auto;
+    display: flow-root;
+  }
+  li {
+    margin: 10px 0 10px 20px;
+    float: left;
+
+    &:nth-of-type(4n + 1) {
+      margin-left: 0;
+    }
+  }
+}

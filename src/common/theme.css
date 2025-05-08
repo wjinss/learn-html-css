@@ -21,4 +21,8 @@
   --pst_apricot: #fdd5b1; /* 파스텔 애프리콧 */
   --pst_ivory: #fffff0; /* 파스텔 아이보리 */
   --pst_dark-blue: #4a6ee0; /* 파스텔 다크블루 */
+  --bl: #121212;
+  --wh: #fafafa;
+  --gray: #808080;
+  --gray-light: #d3d3d3;
 }
