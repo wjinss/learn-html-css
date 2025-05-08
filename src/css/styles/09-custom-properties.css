@@ -17,7 +17,15 @@ body {
 a {
   color: var(--textColor);
   span {
+    color: var(--textColor);
   }
 }
 h1 {
+  color: var(--textColor);
+}
+p {
+  color: var(--textColor);
+}
+div {
+  color: var(--textColor);
 }
