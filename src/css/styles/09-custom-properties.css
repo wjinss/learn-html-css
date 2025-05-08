@@ -1,19 +1,23 @@
+@property --textColor {
+  syntax: '<color>';
+  inherits: false;
+  initial-value: #f0c;
+}
 :root {
-  --mainColor: rgb(49, 83, 3);
+  --green: #0f0;
   --red: #f00;
+  --blue: #00f;
+  --mainColor: var(--green);
 }
 /* CSS 변수 */
 body {
   margin: 50px;
   background: #ffc;
-  color: var(--mainColor);
 }
 a {
-  border: 1px solid var(--mainColor);
+  color: var(--textColor);
   span {
-    color: var(--red);
   }
 }
 h1 {
-  box-shadow: 5px 5px 5px 5px var(--mainColor);
 }
