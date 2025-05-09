@@ -3,44 +3,28 @@ body {
   margin: 50px;
   color: #fafafa;
   background-color: #121212;
+  font-size: clamp(1rem, 2.5vw, 2rem);
 
   /* 320px 이상의 디바이스 - mobile */
-  @media screen and (min-width: 320px) {
+  @media (width >= 320px) {
     color: #5a5a5a;
     background-color: lightblue;
   }
   /* 768px 이상의 디바이스 - tablet */
-  @media screen and (min-width: 768px) {
+  @media (width >= 768px) {
     color: brown;
     background-color: lightcoral;
   }
   /* 1280px 이상의 디바이스 - desktop */
-  @media screen and (min-width: 1280px) {
+  @media (width >= 1280px) {
     color: violet;
     background-color: lightgreen;
   }
 }
 
-/* 320px 이상의 디바이스 - mobile */
-/* @media screen and (min-width: 320px) {
-  body {
-    color: #ffc;
-    background-color: darkblue;
-  }
-} */
-
-/* 768px 이상의 디바이스 - tablet */
-/* @media screen and (min-width: 768px) {
-  body {
-    color: brown;
-    background-color: lightcoral;
-  }
-} */
-
-/* 1280px 이상의 디바이스 - desktop */
-/* @media screen and (min-width: 1280px) {
-  body {
-    color: violet;
-    background-color: lightgreen;
-  }
-} */
+h1 {
+  --spacing: 25px;
+  /* border: 1px solid currentColor; */
+  width: calc(500px + 2 * var(--spacing));
+  padding: var(--spacing);
+}
