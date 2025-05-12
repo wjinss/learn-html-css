@@ -1,0 +1,44 @@
+/* flex 레이아웃 */
+body {
+  margin: 50px;
+}
+/* flex를 활용한 경우 */
+div {
+  div:nth-child(1) {
+    background: var(--pst_blue);
+  }
+  div:nth-child(2) {
+    background: var(--pst_yellow);
+  }
+  div:nth-child(3) {
+    background: var(--pst_green);
+  }
+  div:nth-child(4) {
+    background: var(--pst_pink);
+  }
+}
+.lion {
+  inline-size: 400px;
+  margin-block: 20px;
+  box-shadow: 0 0 0 10px red;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  /* flex-direction, flex-wrap 속성의 단축 속성 */
+  flex-flow: row wrap;
+
+  .lion_item {
+    inline-size: 150px;
+  }
+}
+
+/* float를 활용한 경우 */
+.like {
+  margin-block: 20px;
+  box-shadow: 0 0 0 10px blue;
+  display: flow-root;
+
+  .lion_item {
+    float: inline-end;
+  }
+}
