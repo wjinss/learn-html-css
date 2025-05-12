@@ -18,17 +18,74 @@ div {
   }
 }
 .lion {
-  inline-size: 400px;
+  inline-size: 500px;
+  block-size: 200px;
   margin-block: 20px;
   box-shadow: 0 0 0 10px red;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   /* flex-direction, flex-wrap 속성의 단축 속성 */
-  flex-flow: row wrap;
+  flex-flow: row nowrap;
+  /* 메인 축 정령 */
+  /* justify-content: space-evenly; */
+  /* 교차 축 정렬 */
+  /* align-items: center; */
+  /* 교차 축 정렬(어려줄) */
+  align-content: space-around;
 
   .lion_item {
-    inline-size: 150px;
+    /* inline-size: 100px; */
+    block-size: 80px;
+    /* flex-basis: 150px;
+    flex-shrink: 1;
+     flex-grow: 1; */
+
+    /* flex-grow flex-shrink flex-basis의 단축 속성*/
+    flex: 1 1 150px;
+
+    /* flex:1 = flex: 1 1 0 */
+  }
+  .lion_item:nth-child(4) {
+    /* flex-grow: 2; */
+    flex-shrink: 2;
+  }
+}
+
+.frontend {
+  margin-block: 40px;
+  box-shadow: 0 0 0 10px gray;
+  inline-size: 500px;
+  block-size: 200px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: start;
+  align-items: baseline;
+  column-gap: 20px;
+
+  .frontend_item {
+    inline-size: 100px;
+  }
+
+  .frontend_item:nth-child(1) {
+    block-size: 20px;
+    font-size: 12px;
+    align-self: start;
+    justify-self: start;
+    order: 9999;
+  }
+  .frontend_item:nth-child(2) {
+    block-size: 40px;
+    font-size: 20px;
+  }
+  .frontend_item:nth-child(3) {
+    block-size: 60px;
+    font-size: 30px;
+  }
+  .frontend_item:nth-child(4) {
+    block-size: 80px;
+    font-size: 40px;
+    order: -1;
   }
 }
 
@@ -41,4 +98,15 @@ div {
   .lion_item {
     float: inline-end;
   }
+}
+
+/* Normal Flow 레이아웃 */
+.bootcamp {
+  margin-block: 20px;
+  box-shadow: 0 0 0 10px green;
+  block-size: 200px;
+  inline-size: 400px;
+  text-align: center;
+  /* line-height: 200px; */
+  align-content: center;
 }
