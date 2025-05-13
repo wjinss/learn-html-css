@@ -1,6 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap');
 /* 검색 바 (폼 스타일링) */
 
+:root {
+  --start-color: #1bf008;
+  --end-color: #03cca8;
+  --btn-start-color: #23e97f;
+  --btn-end-color: #00dcc9;
+}
+
 body {
   margin: 50px;
 }
@@ -45,7 +52,7 @@ body {
     border: 1px solid #aaa;
     block-size: 32px;
     padding-inline: 0.5em;
-    border-radius: 8px;
+    /* border-radius: 8px; */
 
     &:read-only,
     &[readonly] {
@@ -71,9 +78,9 @@ button[disabled] {
     background: lime;
   }
 
-  input:hover {
-    /* background: pink; */
-  }
+  /* input:hover {
+    background: pink;
+  } */
 
   input:focus {
     outline: 0;
@@ -81,5 +88,83 @@ button[disabled] {
   input:focus-visible {
     /* outline: 2px solid green; */
     box-shadow: 0 0 2px 2px green;
+  }
+}
+
+/* 바튼 스타일링(원형 그라디언트 버튼) */
+.btn-search {
+  --size: 1.5rem;
+
+  inline-size: var(--size);
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  padding: 0;
+  border: 0;
+  background: var(--btn-start-color) linear-gradient(160deg, var(--btn-start-color) 40%, var(--btn-end-color));
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+
+  &::after {
+    content: '';
+    inline-size: 35%;
+    block-size: 35%;
+    border-radius: inherit;
+    background-color: #fafafa;
+  }
+}
+
+.search_bar {
+  border: 1px solid var(--start-color);
+  border-radius: 50px;
+  display: flex;
+  flex-flow: row nowrap;
+  padding: 12px 12px 12px 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  /* max-height: 48px; */
+
+  &:focus-within {
+    box-shadow: 0 3px 6px 1px rgb(0 0 0 / 0.1);
+  }
+
+  a,
+  button {
+    flex-shrink: 0;
+  }
+
+  figure {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  form {
+    display: contents;
+
+    .form_input {
+      flex-grow: 1;
+
+      input {
+        margin-block: 3px;
+        border: 0;
+        outline: 0 none;
+        line-height: 1.3;
+        color: #6d7478;
+        font-weight: 500;
+        font-size: 0.875rem;
+        appearance: none;
+
+        &::-webkit-search-cancel-button {
+          display: none;
+        }
+        &::-webkit-input-placeholder {
+          color: #bcc3c7;
+        }
+      }
+    }
   }
 }
