@@ -20,8 +20,43 @@ body {
     line-height: 0.7;
     vertical-align: middle;
     font-weight: 900;
-    background: linear-gradient(150deg, #1bf008, #03cca8);
+    background: linear-gradient(#1bf008, #03cca8);
     color: transparent;
     background-clip: text;
+  }
+}
+
+/* 입력 서식 */
+.form_input {
+  font-size: 0.875rem;
+  line-height: 1.3;
+  font-weight: 500;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  column-gap: 0.75rem;
+
+  label {
+    flex-shrink: 0;
+  }
+  input {
+    min-inline-size: 0;
+    flex-grow: 1;
+    border: 1px solid #aaa;
+    block-size: 32px;
+    padding-inline: 0.5em;
+  }
+}
+
+/* 상태 디자인 */
+.like-lion {
+  box-shadow: 0 0 0 10px red;
+  input:hover,
+  input:focus {
+    background: pink;
+  }
+
+  input:focus {
+    outline: none;
   }
 }

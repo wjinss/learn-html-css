@@ -30,12 +30,6 @@
       <figcaption id="logo" class="sr-only">네이버</figcaption>
     </figure>
 
-    <!-- 텍스트 사용 -->
-    <em class="text-logo">
-      <span aria-hidden="true" class="text">n</span>
-      <span class="sr-only">네이버</span>
-    </em>
-
     <!-- <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path
         fill-rule="evenodd"
@@ -50,5 +44,21 @@
         </linearGradient>
       </defs>
     </svg> -->
+
+    <!-- 텍스트 사용 -->
+    <em class="text-logo">
+      <span aria-hidden="true" class="text">n</span>
+      <span class="sr-only">네이버</span>
+    </em>
+    <hr />
+    <h2>입력 서식 컴포넌트</h2>
+    <!-- 레이블 표시 -->
+    <div class="form_input"><label for="input-0">레이블</label><input type="text" name="input" id="input-0" placeholder="입력 서식 힌트" /></div>
+    <hr />
+    <!-- 레이블 숨김 -->
+    <div class="form_input"><label for="input-0" class="sr-only">레이블</label><input type="text" name="input" id="input-0" placeholder="입력 서식 힌트" /></div>
+    <hr />
+    <!-- 레이블 숨김 (상태 디자인) -->
+    <div class="form_input like-lion"><label for="input-0" class="sr-only">레이블</label><input type="text" name="input" id="input-0" placeholder="입력 서식 힌트" /></div>
   </body>
 </html>
