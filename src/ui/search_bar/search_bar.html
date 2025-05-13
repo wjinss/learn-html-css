@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>검색 바 (search_bar - 폼 스타일링)</title>
+    <link rel="shortcut icon" href="/public/favicon/likelion.ico" type="image/x-icon" />
+    <link rel="icon" href="/public/favicon/likelion.svg" type="image/svg" />
+    <link rel="preload" as="font" href="/public/font/suit/SUIT-Variable.woff2" />
+    <link rel="stylesheet" href="/public/font/suit/SUIT-Variable.css" />
+    <link rel="stylesheet" href="/src/common/index.css" />
+    <link rel="stylesheet" href="/src/ui/search_bar/search_bar.css" />
+  </head>
+  <body>
+    <a href="/index.html">메인 페이지 이동</a>
+    <br />
+    <h1>검색 바 (search_bar - 폼 스타일링)</h1>
+    <h2>로고이미지</h2>
+    <!-- svg요소 사용 -->
+    <figure class="logo">
+      <svg aria-labelledby="logo" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H8L15.5 12V0H24V24H15.1875L8 12.5L8 24H0V0Z" fill="url(#paint0_linear_2232_3)" />
+        <defs>
+          <linearGradient id="paint0_linear_2232_3" x1="4.5" y1="-1.93715e-07" x2="20.5" y2="24" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#1BF008" />
+            <stop offset="1" stop-color="#03CCA8" />
+          </linearGradient>
+        </defs>
+      </svg>
+      <figcaption id="logo" class="sr-only">네이버</figcaption>
+    </figure>
+
+    <!-- 텍스트 사용 -->
+    <em class="text-logo">
+      <span aria-hidden="true" class="text">n</span>
+      <span class="sr-only">네이버</span>
+    </em>
+
+    <!-- <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        d="M12 24C18.6274 24 24 18.6274 24 12C24 5.37258 18.6274 0 12 0C5.37258 0 0 5.37258 0 12C0 18.6274 5.37258 24 12 24ZM12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z"
+        fill="url(#paint0_linear_2232_8)"
+      />
+      <defs>
+        <linearGradient id="paint0_linear_2232_8" x1="5" y1="-1.92473e-07" x2="19.5" y2="24" gradientUnits="userSpaceOnUse">
+          <stop stop-color="#06FD10" />
+          <stop offset="1" stop-color="#00E1CE" />
+        </linearGradient>
+      </defs>
+    </svg> -->
+  </body>
+</html>

@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap');
+/* 검색 바 (폼 스타일링) */
+
+body {
+  margin: 50px;
+}
+
+/* 컴포넌트 스타일링 */
+
+/* 텍스트 로고 */
+.text-logo {
+  display: block;
+
+  .text {
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    font-size: 34px;
+    vertical-align: middle;
+    font-weight: 900;
+    background: linear-gradient(135deg, #1bf008, #03cca8);
+    color: transparent;
+    background-clip: text;
+  }
+}
