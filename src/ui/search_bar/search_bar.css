@@ -9,15 +9,18 @@ body {
 
 /* 텍스트 로고 */
 .text-logo {
-  display: block;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
 
   .text {
     font-family: 'Montserrat', sans-serif;
     text-transform: uppercase;
     font-size: 34px;
+    line-height: 0.7;
     vertical-align: middle;
     font-weight: 900;
-    background: linear-gradient(135deg, #1bf008, #03cca8);
+    background: linear-gradient(150deg, #1bf008, #03cca8);
     color: transparent;
     background-clip: text;
   }
