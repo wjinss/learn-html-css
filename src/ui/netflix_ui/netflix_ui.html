@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>넷플릭스 ui 폼 디자인</title>
+    <link rel="shortcut icon" href="/public/favicon/likelion.ico" type="image/x-icon" />
+    <link rel="icon" href="/public/favicon/likelion.svg" type="image/svg" />
+    <link rel="preload" as="font" href="/public/font/suit/SUIT-Variable.woff2" />
+    <link rel="stylesheet" href="/public/font/suit/SUIT-Variable.css" />
+    <link rel="stylesheet" href="/src/common/index.css" />
+    <link rel="stylesheet" href="/src/ui/netflix_ui/netflix_ui.css" />
+  </head>
+  <body>
+    <a href="/index.html">메인 페이지 이동</a>
+    <br />
+    <h1>넷플릭스 ui 폼 디자인</h1>
+    <hr />
+    <form class="promotion_form" novalidate>
+      <div class="input_wrapper">
+        <input type="email" name="promotion_email" id="promotion_email" required placeholder="이메일 주소" />
+        <label for="promotion_email">이메일 주소</label>
+        <span class="error_msg">정확한 이메일 주소를 입력하세요</span>
+      </div>
+      <button type="submit">30일 무료 이용 →</button>
+    </form>
+  </body>
+</html>
