@@ -1,0 +1,162 @@
+/* 그리드 레이아웃 */
+body {
+  margin: 50px;
+}
+body > div {
+  margin-block: 20px;
+  /* box-shadow: 0 0 0 5px black; */
+  outline: 2px solid black;
+  outline-offset: 10px;
+
+  div:nth-child(1) {
+    background: var(--pst_blue);
+  }
+  div:nth-child(2) {
+    background: var(--pst_green);
+  }
+  div:nth-child(3) {
+    background: var(--pst_lilac);
+  }
+  div:nth-child(4) {
+    background: var(--pst_mint);
+  }
+  div:nth-child(5) {
+    background: var(--pst_coral);
+  }
+  div:nth-child(6) {
+    background: var(--pst_teal);
+  }
+  div:nth-child(7) {
+    background: var(--pst_yellow);
+  }
+}
+
+.like,
+.lion,
+.bootcamp {
+  margin-block: 20px;
+  /* box-shadow: 0 0 0 1px black; */
+  inline-size: 500px;
+}
+div {
+  /* text-align: center;
+  align-content: center; */
+  font-weight: 700;
+}
+
+/* Line 기반 아이템 배치 */
+.like {
+  /* inline-size: 100%; */
+  min-inline-size: 320px;
+  block-size: 200px;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(80px, 1fr));
+  grid-template-rows: repeat(4, 1fr);
+  /* grid-auto-rows: 100px; */
+
+  .like-item1 {
+    grid-row-start: 4;
+    grid-column-start: 3;
+    /* grid-row-end: 5;
+    grid-column-end: 4; */
+    /* 셀 하나만 이동할때는 start나 end 하나만 사용가능 */
+  }
+  .like-item2 {
+    grid-row-start: 4;
+    grid-column-start: 4;
+  }
+  .like-item3 {
+    /* grid-row-start: 3;
+    grid-row-end: 5;
+    grid-column-start: 1;
+    grid-column-end: 2; */
+
+    /* 단축속성 */
+    grid-row: 3 / 5;
+    grid-column: 1;
+  }
+  .like-item4 {
+    /* grid-row: 2 / 4;
+    grid-column: 2 / 4; */
+
+    /* row-start / column-start / row-end / column-end   */
+    grid-area: 2 / 2 / 4 / 4;
+    z-index: 1;
+  }
+  .like-item5 {
+    /* grid-area: 1 / 4 / 4 / 5; */
+    grid-row: 1 / span 3;
+    /* span 숫자 : start에서 숫자값만큼 셀을 병합함 */
+    grid-column: 4;
+  }
+  .like-item6 {
+    /* grid-area: 3 / 2 / 5 / 3; */
+    grid-row: 3 / span 2;
+    grid-column: 2;
+  }
+  .like-item7 {
+    grid-column: 2;
+  }
+}
+
+/* Name 기반 아이템 배치 */
+.lion {
+  /* display: inline-grid; */
+  block-size: 200px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-template-areas:
+    '. item1 item1 item2'
+    '. item1 item1 item6'
+    'item4 item5 item5 item3'
+    'item7 item5 item5 .';
+
+  .lion-item1 {
+    grid-area: item1;
+  }
+  .lion-item2 {
+    grid-area: item2;
+  }
+  .lion-item3 {
+    grid-area: item3;
+  }
+  .lion-item4 {
+    grid-area: item4;
+  }
+  .lion-item5 {
+    grid-area: item5;
+  }
+  .lion-item6 {
+    grid-area: item6;
+  }
+  .lion-item7 {
+    grid-area: item7;
+  }
+}
+
+/* grid 아이템 정렬 */
+.bootcamp {
+  display: grid;
+  inline-size: 600px;
+  block-size: 200px;
+  grid-template-columns: repeat(3, 100px);
+  grid-auto-rows: 50px;
+  /* justify-content: center;
+  align-content: center; */
+  place-content: center;
+  /* justify-items: center;
+  align-items: center; */
+
+  /* align이 우선임 */
+  /* place-items: end center; */
+
+  .bootcamp-item3 {
+    justify-self: end;
+    align-self: end;
+  }
+
+  .bootcamp-item5 {
+    place-self: center end;
+  }
+}
