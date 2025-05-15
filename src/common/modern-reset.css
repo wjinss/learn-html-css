@@ -69,11 +69,11 @@ select {
 }
 
 button {
-  background: transparent;
-  border: none;
   cursor: pointer;
+  background: transparent;
+  /* border: none;
   margin: 0;
-  padding: 0;
+  padding: 0; */
 
   &:disabled {
     cursor: not-allowed;
