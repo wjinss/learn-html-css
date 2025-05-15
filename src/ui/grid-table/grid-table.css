@@ -1,4 +1,109 @@
 /* 그리드 테이블 */
 body {
   margin: 50px;
+  background: rgb(40 39 37 / 0.95);
+  color: #fffcf9;
+}
+
+.grid-table {
+  margin-block: 20px;
+  font-size: 0.875rem;
+  border-block: 2px solid #fff;
+  display: grid;
+  grid-template-columns: repeat(6, minmax(max-content, 1fr));
+  grid-template-rows: repeat(4, auto);
+  grid-template-areas:
+    'item-header1 item-contant1 item-contant1 item-header2 item-contant2 item-contant2'
+    'item-header3 item-contant3 item-contant3 item-header4 item-contant4 item-contant4'
+    'item-header5 item-contant5 item-contant5 item-header6 item-contant6 item-contant6'
+    'item-header7 item-contant7 item-contant7 item-contant7 item-contant7 item-contant7';
+  align-content: center;
+  place-items: center stretch;
+
+  dt,
+  dd {
+    padding: 15px 6px;
+  }
+
+  .item-header1 {
+    grid-area: item-header1;
+  }
+  .item-header2 {
+    grid-area: item-header2;
+  }
+  .item-header3 {
+    grid-area: item-header3;
+  }
+  .item-header4 {
+    grid-area: item-header4;
+  }
+  .item-header5 {
+    grid-area: item-header5;
+  }
+  .item-header6 {
+    grid-area: item-header6;
+  }
+  .item-header7 {
+    align-self: stretch;
+    grid-area: item-header7;
+  }
+  .item-contant1 {
+    grid-area: item-contant1;
+  }
+  .item-contant2 {
+    grid-area: item-contant2;
+  }
+  .item-contant3 {
+    grid-area: item-contant3;
+  }
+  .item-contant4 {
+    grid-area: item-contant4;
+  }
+  .item-contant5 {
+    grid-area: item-contant5;
+  }
+  .item-contant6 {
+    grid-area: item-contant6;
+  }
+  .item-contant7 {
+    grid-area: item-contant7;
+  }
+  dt,
+  dd {
+    border-bottom: 1px solid rgb(255 252 249 / 0.3);
+  }
+  dd:last-of-type {
+    border-bottom: 0;
+  }
+}
+.grid-table-ssam {
+  border-block: 0.125rem solid #fff;
+  background: #333;
+  margin-block: 1.25rem;
+  font-size: 0.875rem;
+  min-inline-size: 530px;
+  padding: 10px;
+  /* column-gap: 12px; */
+  display: grid;
+  grid-template-columns: minmax(max-content, 1fr) minmax(max-content, 3fr) minmax(max-content, 1fr) minmax(max-content, 1fr);
+  grid-template-rows: repeat(3, 48px) auto;
+  align-items: center;
+
+  dt,
+  dd {
+    border-bottom: 1px solid rgb(255 252 249 / 0.3);
+    align-content: center;
+  }
+
+  > dt:last-of-type {
+    /* align-self: start; */
+    margin-block: 10px;
+    border-bottom: 0;
+    align-content: start;
+  }
+
+  :is(dd):last-child {
+    grid-area: 4 / 2/ 5 / span 3;
+    border-bottom: 0;
+  }
 }
