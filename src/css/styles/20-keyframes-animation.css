@@ -40,11 +40,23 @@ animation:;
   animation-play-state: paused; */
   animation: zoom 3s 0.5s 3 alternate ease-in-out forwards paused;
 }
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(17.5rem, 1fr));
+  grid-template-rows: 12.5rem;
+  gap: 1.25rem;
 
+  hr {
+    display: none;
+  }
+}
 /* case 클래스 공통 스타일 */
 .case {
   border: 1px solid #cecece;
   padding: 20px;
+  .controls {
+    margin-block: 10px;
+  }
   .button {
     border-radius: 5px;
     padding: 5px 10px;
@@ -67,6 +79,7 @@ animation:;
     background: var(--aqua);
     color: var(--dark-blue);
     text-align: center;
+    align-content: center;
     margin-block: 15px;
   }
 }
@@ -78,7 +91,7 @@ animation:;
 }
 /* Shrink 애니메이션 */
 .shrink .target-animation {
-  animation: shrink 2s infinite alternate ease-in-out p;
+  animation: shrink 2s infinite alternate ease-in-out;
   animation-play-state: paused;
 }
 /* Bounce 애니메이션 */
@@ -90,5 +103,38 @@ animation:;
 /* Shake 애니메이션 */
 .shake .target-animation {
   animation: shake 1.5s infinite ease-in-out alternate;
+  animation-play-state: paused;
+}
+
+/* Spin 애니메이션 */
+.spin .target-animation {
+  width: 120px;
+  aspect-ratio: 1 / 1;
+  /* background: conic-gradient(var(--aqua), var(--pink), var(--mint), var(--yellow), var(--aqua)); */
+  background: conic-gradient(var(--aqua) 0 25%, var(--mint) 25% 50%, var(--yellow) 50% 75%, var(--pink) 75% 100%);
+  border-radius: 50%;
+
+  animation: spin 0.5s infinite linear;
+  animation-play-state: paused;
+}
+
+/* pulse 애니메이션 */
+.pulse .target-animation {
+  animation: pulse 1s infinite ease-in-out alternate;
+  animation-play-state: paused;
+}
+
+/* flip 애니메이션 */
+.flip {
+  perspective: 500px;
+  .target-animation {
+    animation: flip 1s infinite linear;
+    animation-play-state: paused;
+  }
+}
+
+/* wobble */
+.wobble .target-animation {
+  animation: wobble 0.5s infinite ease-in-out;
   animation-play-state: paused;
 }
