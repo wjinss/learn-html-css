@@ -22,13 +22,12 @@ animation:;
     background: lightblue;
   }
   to {
-    width: 400px;
+    width: 200px;
     background: lightpink;
   }
 }
-
-.like {
-  border: 5px solid currentColor;
+.zoom .target-animation {
+  border: 1px solid currentColor;
   padding: 10px;
   width: 100px;
   /* animation-name: zoom;
@@ -39,5 +38,57 @@ animation:;
   animation-delay: 2s;
   animation-fill-mode: both;
   animation-play-state: paused; */
-  animation: zoom 5s 1s 3 alternate ease-in-out forwards running;
+  animation: zoom 3s 0.5s 3 alternate ease-in-out forwards paused;
+}
+
+/* case 클래스 공통 스타일 */
+.case {
+  border: 1px solid #cecece;
+  padding: 20px;
+  .button {
+    border-radius: 5px;
+    padding: 5px 10px;
+    border: none;
+  }
+  .reset-animation {
+    background: var(--coral);
+  }
+  .toggle-animation {
+    background: var(--mint);
+    &.paused {
+      background: var(--purple);
+    }
+  }
+  .target-animation {
+    border-radius: 8px;
+    padding: 1em;
+    font-size: 1.5rem;
+    font-weight: 700;
+    background: var(--aqua);
+    color: var(--dark-blue);
+    text-align: center;
+    margin-block: 15px;
+  }
+}
+
+/* Fade 애니메이션 */
+.fade .target-animation {
+  animation: fade 1.5s infinite alternate linear;
+  animation-play-state: paused;
+}
+/* Shrink 애니메이션 */
+.shrink .target-animation {
+  animation: shrink 2s infinite alternate ease-in-out p;
+  animation-play-state: paused;
+}
+/* Bounce 애니메이션 */
+.bounce .target-animation {
+  animation: bounce 1.5s infinite ease-in-out alternate;
+  animation-play-state: paused;
+}
+
+/* Shake 애니메이션 */
+.shake .target-animation {
+  animation: shake 1.5s infinite ease-in-out alternate;
+  animation-play-state: paused;
 }
