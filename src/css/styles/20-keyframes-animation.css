@@ -1,0 +1,43 @@
+/* 키프레임 애니메이션 */
+
+body {
+  margin: 50px;
+}
+/* 
+animation-name:;
+animation-duration:;
+animation-timing-function:;
+animation-delay:;
+animation-iteration-count:;
+animation-direction:;
+animation-fill-mode:;
+animation-play-state:;
+animation:; 
+*/
+
+/* 키프레임 규칙 */
+@keyframes zoom {
+  from {
+    width: 100px;
+    background: lightblue;
+  }
+  to {
+    width: 400px;
+    background: lightpink;
+  }
+}
+
+.like {
+  border: 5px solid currentColor;
+  padding: 10px;
+  width: 100px;
+  /* animation-name: zoom;
+  animation-duration: 3s;
+  animation-iteration-count: 2;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+  animation-delay: 2s;
+  animation-fill-mode: both;
+  animation-play-state: paused; */
+  animation: zoom 5s 1s 3 alternate ease-in-out forwards running;
+}
