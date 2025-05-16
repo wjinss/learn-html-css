@@ -77,7 +77,6 @@
   }
 }
 
-/* wabble 애니메이션 */
 /* Wobble Animation */
 @keyframes wobble {
   0%,
@@ -98,5 +97,21 @@
   }
   75% {
     transform: translateX(-5px) rotate(-1deg);
+  }
+}
+
+@property --rotation {
+  syntax: '<angle>';
+  inherits: false;
+  initial-value: 0deg;
+}
+
+/* CSS 변수를 활용한 애니메이션 */
+@keyframes rotate {
+  0% {
+    --rotation: 0deg;
+  }
+  100% {
+    --rotation: 360deg;
   }
 }

@@ -26,6 +26,7 @@ animation:;
     background: lightpink;
   }
 }
+
 .zoom .target-animation {
   border: 1px solid currentColor;
   padding: 10px;
@@ -137,4 +138,35 @@ animation:;
 .wobble .target-animation {
   animation: wobble 0.5s infinite ease-in-out;
   animation-play-state: paused;
+}
+
+/* CSS 변수를 활용한 애니메이션 */
+.rotate .target-animation {
+  --rotation: 0deg;
+  inline-size: 150px;
+  aspect-ratio: 1;
+  position: relative;
+
+  &::before {
+    filter: blur(15px);
+  }
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    inset-block-start: 50%;
+    inset-inline-start: 50%;
+    translate: -50% -50%;
+    z-index: -1;
+    padding: 3px;
+    inline-size: 100%;
+    block-size: 100%;
+    box-sizing: content-box;
+    /* background: conic-gradient(from var(--rotation), var(--aqua) 0 30%, transparent 30% 100%); */
+    background: conic-gradient(from var(--rotation), var(--aqua), var(--mint), var(--yellow), var(--pink), var(--aqua));
+    border-radius: inherit;
+    animation: rotate 4s infinite linear;
+    animation-play-state: paused;
+  }
 }
