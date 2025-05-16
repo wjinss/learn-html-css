@@ -160,9 +160,9 @@ animation:;
     translate: -50% -50%;
     z-index: -1;
     padding: 3px;
+    box-sizing: content-box;
     inline-size: 100%;
     block-size: 100%;
-    box-sizing: content-box;
     /* background: conic-gradient(from var(--rotation), var(--aqua) 0 30%, transparent 30% 100%); */
     background: conic-gradient(from var(--rotation), var(--aqua), var(--mint), var(--yellow), var(--pink), var(--aqua));
     border-radius: inherit;
