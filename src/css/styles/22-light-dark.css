@@ -1,0 +1,16 @@
+/* 라이트 / 다크 모드 */
+:root {
+  /* light-dark() 함수 사용 전제 조건 */
+  color-scheme: light dark;
+}
+
+body {
+  margin: 50px;
+  background-color: lightpink;
+  color: light-dark(green, red);
+
+  /* 미디어쿼리 - 다크모드 */
+  @media (prefers-color-scheme: dark) {
+    background-color: teal;
+  }
+}
