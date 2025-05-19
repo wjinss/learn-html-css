@@ -42,20 +42,24 @@ body {
   flex-flow: column wrap;
   align-items: center;
   row-gap: 12px;
-  background: var(--white);
+  background-color: var(--white);
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  background-size: cover;
   block-size: var(--size);
   padding-block-start: var(--large-spacing);
   line-height: var(--line-normal);
   letter-spacing: -0.02em;
 
   &.dark-bg {
-    background: var(--black);
     color: var(--white);
+    background-color: var(--black);
   }
 
   @media (width>=1024px) {
     padding-block-start: var(--extra-large-spacing);
     row-gap: 16px;
+    block-size: 625px;
   }
 
   .headline {
@@ -137,4 +141,62 @@ body {
   }
 }
 
+/* 카드 컴포넌트 별 배경 이미지 */
+.ipad-pro {
+  background-image: image-set(url(/src/assets/apple/ipad_pro.avif) 1x, url(/src/assets/apple/ipad_pro_2x.avif) 2x);
+
+  @media (min-width: 1024px) {
+    background-image: image-set(url(/src/assets/apple/ipad_pro_wide.avif) 1x, url(/src/assets/apple/ipad_pro_wide_2x.avif) 2x);
+  }
+}
+
+.ipad-air {
+  background-image: image-set(url(/src/assets/apple/ipad_air.avif) 1x, url(/src/assets/apple/ipad_air_2x.avif) 2x);
+
+  @media (min-width: 1024px) {
+    background-image: image-set(url(/src/assets/apple/ipad_air_wide.avif) 1x, url(/src/assets/apple/ipad_air_wide_2x.avif) 2x);
+  }
+}
+
+.iphone15-pro {
+  background-image: image-set(url(/src/assets/apple/iphone15_pro.avif) 1x, url(/src/assets/apple/iphone15_pro_2x.avif) 2x);
+
+  @media (min-width: 1024px) {
+    background-image: image-set(url(/src/assets/apple/iphone15_pro_wide.avif) 1x, url(/src/assets/apple/iphone15_pro_wide_2x.avif) 2x);
+  }
+}
+
+.iphone15 {
+  background-image: image-set(url(/src/assets/apple/iphone15.avif) 1x, url(/src/assets/apple/iphone15_2x.avif) 2x);
+}
+
+.apple-watch {
+  background-image: image-set(url(/src/assets/apple/apple_watch.avif) 1x, url(/src/assets/apple/apple_watch_2x.avif) 2x);
+}
+
+.macbook-air {
+  background-image: image-set(url(/src/assets/apple/macbook_air.avif) 1x, url(/src/assets/apple/macbook_air_2x.avif) 2x);
+}
+
+.airpods-pro {
+  background-image: image-set(url(/src/assets/apple/airpods_pro.avif) 1x, url(/src/assets/apple/airpods_pro_2x.avif) 2x);
+}
+
 /* 카드 레이아웃 */
+.product-list {
+  --column-count: 1;
+
+  display: grid;
+  grid-template-columns: repeat(var(--column-count), 1fr);
+  gap: 20px;
+
+  @media (min-width: 1280px) {
+    --column-count: 2;
+  }
+
+  .product-list .ipad-pro,
+  .product-list .ipad-air,
+  .product-list .iphone15-pro {
+    grid-column-end: span 2;
+  }
+}
