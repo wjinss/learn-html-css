@@ -194,9 +194,9 @@ body {
     --column-count: 2;
   }
 
-  .product-list .ipad-pro,
-  .product-list .ipad-air,
-  .product-list .iphone15-pro {
+  .ipad-pro,
+  .ipad-air,
+  .iphone15-pro {
     grid-column-end: span 2;
   }
 }
