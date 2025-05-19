@@ -1,4 +1,20 @@
+:root {
+  --gray-100: #eee;
+  --gray-200: #b3b3b3;
+  --gray-500: #4d4d4d;
+}
+
 /* 장바구니 - cart */
 body {
   margin: 50px;
+  font-family: 'Pretendard Variable', Pretendard, sans-serif;
+  background: #fff;
+  color: #000;
+}
+
+/* 장바구니 레이아웃 */
+.cart {
+  inline-size: 712px;
+  background: coral;
+  padding: 20px;
 }
