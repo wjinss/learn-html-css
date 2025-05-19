@@ -9,25 +9,25 @@ body > div {
   outline-offset: 10px;
 
   div:nth-child(1) {
-    background: var(--pst_blue);
+    background: var(--blue);
   }
   div:nth-child(2) {
-    background: var(--pst_green);
+    background: var(--green);
   }
   div:nth-child(3) {
-    background: var(--pst_lilac);
+    background: var(--lilac);
   }
   div:nth-child(4) {
-    background: var(--pst_mint);
+    background: var(--mint);
   }
   div:nth-child(5) {
-    background: var(--pst_coral);
+    background: var(--coral);
   }
   div:nth-child(6) {
-    background: var(--pst_teal);
+    background: var(--teal);
   }
   div:nth-child(7) {
-    background: var(--pst_yellow);
+    background: var(--yellow);
   }
 }
 
