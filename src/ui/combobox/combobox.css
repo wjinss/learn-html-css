@@ -1,0 +1,88 @@
+/* 콤보 박스 */
+body {
+  margin: 50px;
+}
+
+/* 인라인 그리드를 활용한 콤보박스 UI */
+/* .combo-box {
+  display: inline-grid;
+  grid-template-columns: repeat(4 / 1fr);
+  grid-template-rows: 1fr;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 8px;
+  padding: 12px 10px;
+  color: #757575;
+  outline: 1px solid currentColor;
+  border-radius: 2px;
+  position: relative;
+
+  &:focus-within {
+    outline: 3px solid #2ede75;
+  }
+
+  .icon-global {
+    grid-column: 1 / 2;
+  }
+  .form-combo {
+    grid-column: 1 / 4;
+    font-size: 1rem;
+
+    select {
+      color: #757575;
+      appearance: none;
+      line-height: 1.2;
+      text-align: center;
+      border: none;
+      outline: none;
+    }
+  }
+  .icon-down {
+    grid-column: 3 / 4;
+  }
+} */
+
+/* 인라인 그리드를 활용한 콤보박스 UI - 쌤 */
+.combo-box {
+  display: inline-grid;
+  grid-template-columns: auto;
+  /* place-items: center; */
+  align-items: center;
+  padding: 4px 12px;
+  border: 1px solid gray;
+  border-radius: 4px;
+  background: gold;
+  /* isolation: isolate; */
+
+  &:focus-within {
+    box-shadow: 0 0 0 2px lightgreen;
+  }
+
+  .icon-global,
+  .form-combo,
+  .icon-down {
+    grid-area: 1 / 1 / 2 / 2;
+  }
+
+  .icon-global,
+  .icon-down {
+    /* z-index: -1; */
+    pointer-events: none;
+  }
+
+  .icon-global {
+    justify-self: start;
+  }
+  .form-combo {
+    select {
+      outline: none;
+      appearance: none;
+      border: 0;
+      background: transparent;
+      padding: 4px 20px;
+    }
+  }
+  .icon-down {
+    justify-self: end;
+  }
+}
