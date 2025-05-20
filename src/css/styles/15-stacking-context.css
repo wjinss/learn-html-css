@@ -1,0 +1,71 @@
+/* 스태킹 컨텍스트(쌓임 맥락) */
+body {
+  margin: 50px;
+}
+
+.bootcamp {
+  background: lightgoldenrodyellow;
+  border: 5px solid lightgreen;
+  inline-size: 200px;
+  aspect-ratio: 1;
+  position: relative;
+  isolation: isolate;
+
+  .like,
+  .lion {
+    inline-size: 50%;
+    aspect-ratio: 1;
+    position: absolute;
+    inset-block-start: 50%;
+    inset-inline-start: 50%;
+    translate: -50% -50%;
+  }
+  .like {
+    background: lightblue;
+  }
+  .lion {
+    background: lightpink;
+    inline-size: 60%;
+    z-index: -1;
+  }
+  .frontend {
+    inline-size: 100%;
+    block-size: 100%;
+    text-align: center;
+    align-content: center;
+    position: absolute;
+    /* isolation: isolate; */
+  }
+}
+
+.wrapper {
+  border: 5px solid lightseagreen;
+  padding: 10px 100px;
+  display: flex;
+  flex-flow: row nowrap;
+
+  div {
+    inline-size: 100px;
+    aspect-ratio: 1;
+    margin-inline-start: -50px;
+    border-radius: 50%;
+    text-align: center;
+    align-content: center;
+
+    &:hover {
+      z-index: 1;
+    }
+  }
+  .box1 {
+    background: lightsalmon;
+  }
+  .box2 {
+    background: lightyellow;
+  }
+  .box3 {
+    background: lightcoral;
+  }
+  .box4 {
+    background: lightskyblue;
+  }
+}
