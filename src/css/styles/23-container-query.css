@@ -2,7 +2,7 @@
 body {
   margin: 50px;
 }
-.range-control {
+/* .range-control {
   margin-bottom: 20px;
 }
 .wrapper {
@@ -37,5 +37,47 @@ body {
     .lion {
       background: lightblue;
     }
+  }
+} */
+.card-wrapper {
+  container-type: inline-size;
+
+  .card-component {
+    background: #fafafa;
+    border: 1px solid #ccc;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 20px;
+    padding: 20px;
+
+    @container (width >= 480px) {
+      flex-direction: row;
+    }
+
+    img {
+      inline-size: 100%;
+      aspect-ratio: 3 /2;
+      object-fit: cover;
+    }
+    figcaption {
+      text-align: center;
+      margin-block-start: 8px;
+      font-weight: 600;
+    }
+    p {
+      line-height: 1.5;
+      color: #656565;
+      text-align: justify;
+    }
+  }
+}
+
+/* 그리드 레이아웃 */
+.grid-wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  .card-wrapper:nth-child(n + 5) {
+    grid-column: span 2;
   }
 }
