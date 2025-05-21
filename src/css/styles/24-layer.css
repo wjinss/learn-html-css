@@ -1,0 +1,43 @@
+/* 레이어 규칙 */
+@layer module, state;
+
+@layer module {
+  body {
+    background-color: lightblue !important;
+  }
+
+  .alert {
+    background-color: darkcyan;
+    padding: 1em;
+    color: white;
+  }
+  p {
+    border: medium solid purple;
+  }
+}
+
+@layer state {
+  body {
+    background-color: lightpink !important;
+  }
+  .alert {
+    background-color: brown;
+    padding: 1em;
+    color: white;
+  }
+  p {
+    border: medium solid red;
+  }
+}
+
+body {
+  margin: 50px;
+  background-color: lightgreen !important;
+}
+
+h1 {
+  margin-block: 50px;
+}
+
+/* 레이어의 우선순위는 일반 요소보다 낮다 */
+/* !important 가 적용되면 우선순위가 역으로 진행된다 > 레이어가 우선이 됨*/
